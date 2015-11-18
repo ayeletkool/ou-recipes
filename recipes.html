@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OU Recipes</title>
+<script type="text/javascript" src="C:\Users\AJ\Downloads\vue-1.0.8\vue-1.0.8\dist\vue.min.js"></script>
+<link rel="stylesheet" type="text/css" href="recipes.css">
+</head>
+<body>
+
+<div id="recipes">
+
+<p class="tab">Search</p>
+
+<input class="tab" v-model="searchText">
+
+<ul>
+    <li v-for="recipe in recipes | filterBy searchText in 'post_title'">
+    <p class="title">{{recipe.post_title}}</p>
+    <p class="type">{{recipe.recipe_type}}</p>
+    </li>
+    </ul>
+</div>
+
+<script src="recipes.js"></script>
+
+</body>
+</html>
