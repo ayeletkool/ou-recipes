@@ -16,6 +16,7 @@ ul{
 }
 
 .type{
+	text-indent: 5px;
 	font-size: 15px;
 	font-family: Arial;
 }

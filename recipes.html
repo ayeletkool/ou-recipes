@@ -15,9 +15,10 @@
 <input class="tab" v-model="searchText">
 
 <ul>
-    <li v-for="recipe in recipes | filterBy searchText in 'post_title'">
-    <p class="title">{{recipe.post_title}}</p>
-    <p class="type">{{recipe.recipe_type}}</p>
+    <li v-for="recipe in recipes | filterBy searchText in '_source.post_title'">
+    <p class="title">{{recipe._source.post_title}}<span class="type">{{recipe._source.post_meta.recipe_type}}</span></p>
+    <p class="ingredients">{{recipe._source.post_meta.recipe_ingredients}}</p>
+    <p class="instructions">{{recipe._source.post_meta.recipe_instructions}}</p>
     </li>
     </ul>
 </div>
