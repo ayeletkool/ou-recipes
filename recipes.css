@@ -16,7 +16,8 @@ ul{
 }
 
 .type{
-	text-indent: 5px;
+	position: relative;
+	left: 10px;
 	font-size: 15px;
 	font-family: Arial;
 }
