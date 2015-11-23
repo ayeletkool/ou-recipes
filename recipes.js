@@ -20,14 +20,11 @@ new Vue({
 
     computed:{
         options: function(){
-            console.log(this.recipes.length);
-
             var unique = [];
 
             for (i = 0; i < this.recipes.length; i++) {
                 var currentRecipe = this.recipes[i];
                 var currentRecipeType = currentRecipe._source.post_meta.recipe_type[0];
-                     // if(unique.indexOf(currentRecipeType) < 0 ) {
                         var counter = 0;
                         for (var j = 0; j < unique.length; j++) {
                             if(unique[j]==currentRecipeType) continue;
@@ -35,8 +32,6 @@ new Vue({
                         }
                         
                         if(counter==unique.length) unique.push(currentRecipeType);
-                                         console.log("unique array: "+unique);
-                                         console.log("current recipe type: "+ currentRecipeType);
                      }
 
             return unique;
