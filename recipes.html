@@ -15,7 +15,7 @@
 <input class="tab" v-model="searchText">
 
 <select v-model="selected">
-<option v-for="option in options">
+<option v-for="option in options | orderBy 'option'">
 	{{option}}
 </option></select>
 
